@@ -11,7 +11,7 @@ const handlePizza = () => console.log(pizza.name);
 // export only what we want
 module.exports = class PizzaHouse {
     constructor() {
-        this.pizzaMenuSet = [];
+        this.pizzaMenuSet = ['pepperoni', 'hawaiian', 'margherita'];
         this.customers = [];
     }
 

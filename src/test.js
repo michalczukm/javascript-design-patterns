@@ -30,3 +30,27 @@ console.log('============ 2-class-es6.js');
     ph2.addCustomer({name: 'Max', surname: 'Undefined'});
     console.log("ph2.customers: ", ph2.getCustomers(), '\n');
 }
+
+
+console.log('============ 3-factory.js');
+{
+    const pizzaFactory = require('./3-factory');
+
+    const pizza = pizzaFactory.create('hawaiian');
+    console.log('eat pizza with:', pizza.ingredients, '\n');
+}
+
+
+console.log('============ 3-another-factory.js');
+{
+    const pizzaFactory = require('./3-another-factory');
+
+    const pizzaResult = pizzaFactory.create('hawaiian');
+    console.log('eat pizza with:', pizzaResult.value.ingredients, '\n');
+
+    const noPizza = pizzaFactory.create('seafood pizza');
+    console.log(`
+        me: you serve nice pizza with seafood, right?
+        waiter: ${noPizza.isSuccess}\n
+    `);
+}

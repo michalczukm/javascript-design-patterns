@@ -7,7 +7,7 @@
 
 // export only what we want
 const pizzaHouse = (function () {
-    _pizzaMenuSet = [];
+    _pizzaMenuSet = ['pepperoni', 'hawaiian', 'margherita'];
     _customers = [];
 
     _handlePizza = () => console.log(pizza.name);

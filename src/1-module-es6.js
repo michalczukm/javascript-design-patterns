@@ -4,7 +4,7 @@
  * Every file is a module, we control what we export via exports
  */
 
-_pizzaMenuSet = [];
+_pizzaMenuSet = ['pepperoni', 'hawaiian', 'margherita'];
 _customers = [];
 
 _handlePizza = () => console.log(pizza.name);
@@ -16,6 +16,10 @@ function addCustomer(customer) {
 function getCustomers() {
     return _customers;
 };
+
+function canMakePizza(type) {
+    return _pizzaMenuSet.includes(type);
+}
 
 function handleOrder (order) {
     order.pizzaSet.forEach(pizza => _handlePizza);
@@ -29,5 +33,6 @@ function handleOrder (order) {
 module.exports = {
     addCustomer,
     getCustomers,
-    handleOrder
+    handleOrder,
+    canMakePizza
 };
