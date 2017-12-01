@@ -29,6 +29,8 @@ const orderService = (function() {
             case 'internet':
                 callMethod = () => delivery.internetDelivery(pizzaSet);
                 break;
+            default:
+                throw new Error(`ups, no such delivery method as ${method}`)
         }
 
         _callDelivery(callMethod);

@@ -5,7 +5,6 @@
  * Only returned methods/fields are public
  */
 
-// export only what we want
 const pizzaHouse = (function () {
     _pizzaMenuSet = ['pepperoni', 'hawaiian', 'margherita'];
     _customers = [];
@@ -24,6 +23,7 @@ const pizzaHouse = (function () {
         order.pizzaSet.forEach(pizza => _handlePizza);
     }
 
+    // export only what we want    
     return {
         addCustomer,
         getCustomers,
