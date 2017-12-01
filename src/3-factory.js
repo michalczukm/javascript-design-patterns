@@ -7,7 +7,8 @@
  * Here - lets create pizza with ingredients, depending on its type.
  */
 class Pizza {
-    constructor(...ingredients) {
+    constructor(name, ...ingredients) {
+        this.name = name;
         this.ingredients = [...ingredients, 'cheese'];
     }
 }
@@ -16,9 +17,9 @@ const pizzaFactory = (function() {
     const create = (type) => {
         switch (type) {
             case 'pepperoni':
-                return new Pizza('pepperoni');
+                return new Pizza('power pepperoni', 'pepperoni');
             case 'hawaiian':
-                return new Pizza('pineapple', 'ham');
+                return new Pizza('ultra hawaiian', 'pineapple', 'ham');
             default:
                 return new Pizza();
         }

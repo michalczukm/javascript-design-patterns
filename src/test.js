@@ -54,3 +54,13 @@ console.log('============ 3-another-factory.js');
         waiter: ${noPizza.isSuccess}\n
     `);
 }
+
+
+console.log('============ 4-strategy.js');
+{
+    const orderService = require('./4-strategy');
+
+    orderService.placeOrder(['hawaiian'], 'on side');
+    orderService.placeOrder(['hawaiian', 'pepperoni'], 'external');
+    orderService.placeOrder(['hawaiian'], 'internet');    
+}

@@ -9,7 +9,8 @@
 const pizzaHouse = require('./1-module-es6');
 
 class Pizza {
-    constructor(...ingredients) {
+    constructor(name, ...ingredients) {
+        this.name = name;
         this.ingredients = [...ingredients, 'cheese'];
     }
 }
@@ -30,9 +31,9 @@ const pizzaFactory = (function() {
         if(pizzaHouse.canMakePizza(type)) {
             switch (type) {
                 case 'pepperoni':
-                    return new Result(new Pizza('pepperoni'));
+                    return new Result(new Pizza('power pepperoni', 'pepperoni'));
                 case 'hawaiian':
-                    return new Result(new Pizza('pineapple', 'ham'));
+                    return new Result(new Pizza('ultra hawaiian', 'pineapple', 'ham'));
                 default:
                     return new Result(new Pizza());
             }
